@@ -14,16 +14,16 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./output_images/Found_corners.jpg "Corners"
-[image2]: ./output_images/Undistorted.jpg "Undistorted"
-[image3]: ./output_images/Undistorted_Testimage.jpg "Undistorted Test Image"
-[image4]: ./output_images/Thresholded_grad_x.jpg "Gradient X"
-[image5]: ./output_images/Thresholded_G_channel.jpg "G channel"
-[image6]: ./output_images/Thresholded_V_channel.jpg "V channel"
-[image7]: ./output_images/Thresholded_Final.jpg "Combined"
-[image8]: ./output_images/Bird's-eye-view.jpg "Bird's-eye-view"
-[image9]: ./output_images/Lane_lines.jpg "Detected Lane Lines"
-[image10]: ./output_images/Final_image.jpg "Final Image"
+[image1]: output_images/Found_corners.jpg "Corners"
+[image2]: output_images/Undistorted.jpg "Undistorted"
+[image3]: output_images/Undistorted_Testimage.jpg "Undistorted Test Image"
+[image4]: output_images/Thresholded_grad_x.jpg "Gradient X"
+[image5]: output_images/Thresholded_G_channel.jpg "G channel"
+[image6]: output_images/Thresholded_V_channel.jpg "V channel"
+[image7]: output_images/Thresholded_Final.jpg "Combined"
+[image8]: output_images/Bird's-eye-view.jpg "Bird's-eye-view"
+[image9]: output_images/Lane_lines.jpg "Detected Lane Lines"
+[image10]: output_images/Final_image.jpg "Final Image"
 
 [video1]: ./project_video_processed.mp4 "Video"
 

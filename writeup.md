@@ -14,7 +14,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./output_images/Found_corners.jpg "Corners"
+[image1]: output_images/Found_corners.jpg "Corners"
 [image2]: ./output_images/Undistorted.jpg "Undistorted"
 [image3]: ./output_images/Undistorted_Testimage.jpg "Undistorted Test Image"
 [image4]: ./output_images/Thresholded_grad_x.jpg "Gradient X"

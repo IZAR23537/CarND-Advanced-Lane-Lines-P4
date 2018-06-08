@@ -12,10 +12,7 @@ The goals / steps of this project are the following:
 * Warp the detected lane boundaries back onto the original image.
 * Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
-[//]: # (Image References)
 
-[image1]: output_images/Found_corners.jpg
-[image2]: ./output_images/Undistorted.jpg 
 [image3]: ./output_images/Undistorted_Testimage.jpg 
 [image4]: ./output_images/Thresholded_grad_x.jpg "Gradient X"
 [image5]: ./output_images/Thresholded_G_channel.jpg "G channel"
@@ -37,11 +34,11 @@ I started the camera calibration by preparing "object points", which will be the
 
 Thus, `objp` is just a replicated array of coordinates, and `objtpoints` will be appended with a copy of it every time I successfully detect all chessboard corners in a test image. `imgpoints` will be appended with the (x, y) pixel position of each of the corners in the image plane with each successful chessboard detection.  
 
-![alt text][image1]
+![alt text][./output_images/Found_corners.jpg]
 
 I then used the output `objtpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result on the chessboard:
 
-![alt text][image2]
+![alt text][./output_images/Undistorted.jpg]
 
 As a next step I applied the undistortion to a test image:
 

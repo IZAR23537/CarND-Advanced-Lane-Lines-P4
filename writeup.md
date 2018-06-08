@@ -14,16 +14,16 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: output_images/Found_corners.jpg "Corners"
-[image2]: output_images/Undistorted.jpg "Undistorted"
-[image3]: output_images/Undistorted_Testimage.jpg "Undistorted Test Image"
-[image4]: output_images/Thresholded_grad_x.jpg "Gradient X"
-[image5]: output_images/Thresholded_G_channel.jpg "G channel"
-[image6]: output_images/Thresholded_V_channel.jpg "V channel"
-[image7]: output_images/Thresholded_Final.jpg "Combined"
-[image8]: output_images/Bird's-eye-view.jpg "Bird's-eye-view"
-[image9]: output_images/Lane_lines.jpg "Detected Lane Lines"
-[image10]: output_images/Final_image.jpg "Final Image"
+[image1]: ./output_images/Found_corners.jpg "Corners"
+[image2]: ./output_images/Undistorted.jpg "Undistorted"
+[image3]: ./output_images/Undistorted_Testimage.jpg "Undistorted Test Image"
+[image4]: ./output_images/Thresholded_grad_x.jpg "Gradient X"
+[image5]: ./output_images/Thresholded_G_channel.jpg "G channel"
+[image6]: ./output_images/Thresholded_V_channel.jpg "V channel"
+[image7]: ./output_images/Thresholded_Final.jpg "Combined"
+[image8]: ./output_images/Bird's-eye-view.jpg "Bird's-eye-view"
+[image9]: ./output_images/Lane_lines.jpg "Detected Lane Lines"
+[image10]: ./output_images/Final_image.jpg "Final Image"
 
 [video1]: ./project_video_processed.mp4 "Video"
 
@@ -37,7 +37,7 @@ I started the camera calibration by preparing "object points", which will be the
 
 Thus, `objp` is just a replicated array of coordinates, and `objtpoints` will be appended with a copy of it every time I successfully detect all chessboard corners in a test image. `imgpoints` will be appended with the (x, y) pixel position of each of the corners in the image plane with each successful chessboard detection.  
 
-![alt text][image1]
+![alt text][./output_images/Found_corners.jpg]
 
 I then used the output `objtpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result on the chessboard:
 

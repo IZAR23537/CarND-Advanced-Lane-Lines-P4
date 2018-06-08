@@ -134,7 +134,7 @@ I implemented this step in the 31st and 32nd code cells. First I used image dist
 
 #### 1. Video output.
 
-Here's a [link to my video result](./project_video.mp4)
+Here's a [link to my video result](./project_video_processed.mp4)
 
 ---
 

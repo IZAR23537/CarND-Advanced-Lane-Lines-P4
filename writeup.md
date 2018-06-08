@@ -54,17 +54,17 @@ As a next step I applied the undistortion to a test image:
 
 I used a combination of color and gradient thresholds to generate a binary image (this step is going through from the 8th to the 24th code cell in the IPhyton notebook.) 
 
-Here's an example of a gradient binary image. 
+Here's an example of a gradient binary image: 
 ![alt text][image4]
 
 
-I used HLS, RGB, LUV and Gray colorspaces and their channels to create different thresholded binary images that I can use for the image combination.
+I used HLS, RGB, LUV and Gray colorspaces and their channels to create different thresholded binary images that I can use for the image combination. Here are a few examples:
 
 ![alt text][image5]
 ![alt text][image6]
 
 
-The final output for this step. 
+The final output for this step: 
 
 ![alt text][image7]
 
@@ -132,7 +132,6 @@ I implemented this step in the 31st and 32nd code cells. First I used image dist
 
 ### Pipeline (video)
 
-#### 1. Video output.
 
 Here's a [link to my video result](./project_video_processed.mp4)
 
@@ -140,7 +139,7 @@ Here's a [link to my video result](./project_video_processed.mp4)
 
 ### Discussion
 
-#### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
+#### Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
 The first few step in this project like the camera calibration and the creation of the binary images was straight forward.
 The first challenging part in this project for me was the creation of the perspective transform and finding the right values for it.

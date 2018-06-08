@@ -14,9 +14,9 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: output_images/Found_corners.jpg "Corners"
-[image2]: ./output_images/Undistorted.jpg "Undistorted"
-[image3]: ./output_images/Undistorted_Testimage.jpg "Undistorted Test Image"
+[image1]: output_images/Found_corners.jpg
+[image2]: ./output_images/Undistorted.jpg 
+[image3]: ./output_images/Undistorted_Testimage.jpg 
 [image4]: ./output_images/Thresholded_grad_x.jpg "Gradient X"
 [image5]: ./output_images/Thresholded_G_channel.jpg "G channel"
 [image6]: ./output_images/Thresholded_V_channel.jpg "V channel"

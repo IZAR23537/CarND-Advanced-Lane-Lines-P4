@@ -18,12 +18,13 @@ The goals / steps of this project are the following:
 [image2]: ./output_images/Undistorted.JPG "Undistorted"
 [image3]: ./output_images/Undistorted_Testimage.JPG "Undistorted Test Image"
 [image4]: ./output_images/Thresholded_grad_x.JPG "Gradient X"
-[image5]: ./output_images/Thresholded_G_channel.JPG "G channel"
-[image6]: ./output_images/Thresholded_V_channel.JPG "V channel"
-[image7]: ./output_images/Thresholded_Final.JPG "Combined"
-[image8]: ./output_images/Bird's-eye-view.JPG "Bird's-eye-view"
-[image9]: ./output_images/Lane_lines.JPG "Detected Lane Lines"
-[image10]: ./output_images/Final_image.JPG "Final Image"
+[image5]: ./output_images/Thresholded_RGB_B_channel.JPG "Blue channel"
+[image6]: ./output_images/Thresholded_LUV_V_channel.JPG "V channel"
+[image7]: ./output_images/Thresholded_LAB_B_channel.JPG "B channel"
+[image8]: ./output_images/Final_image.JPG "Combined"
+[image9]: ./output_images/Bird's-eye-view.JPG "Bird's-eye-view"
+[image10]: ./output_images/Lane_lines.JPG "Detected Lane Lines"
+[image11]: ./output_images/Detected_lane.JPG "Final Image"
 
 [video1]: ./project_video_processed.mp4 "Video"
 
@@ -52,23 +53,23 @@ As a next step I applied the undistortion to a test image:
 
 #### 1. Describing how I used color transforms and gradients  to create a thresholded binary image.
 
-I used a combination of color and gradient thresholds to generate a binary image (this step is going through from the 8th to the 24th code cell in the IPhyton notebook.) 
+I used a combination of color and gradient thresholds to generate a binary image (this step is going through from the 8th to the 26th code cell in the IPhyton notebook.) 
 
 Here's an example of a gradient binary image: 
 ![alt text][image4]
 
 
-I used HLS, RGB, LUV and Gray colorspaces and their channels to create different thresholded binary images that I can use for the image combination. Here are a few examples:
+I used HLS, RGB, LUV, LAB and Gray colorspaces and their channels to create different thresholded binary images that I can use for the image combination. Here are a few examples:
 
 ![alt text][image5]
 ![alt text][image6]
-
+![alt text][image7]
 
 The final output for this step: 
 
-![alt text][image7]
+![alt text][image8]
 
-For this image, I ended up using X oriented gradient, RGB and LUV colorspace images.    
+For this image, I ended up using X oriented gradient, RGB, LAB and LUV colorspace images.    
 
 
 #### 2. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
@@ -76,12 +77,12 @@ For this image, I ended up using X oriented gradient, RGB and LUV colorspace ima
 The code for my perspective transform includes a function called `img_warp()`, which appears in the 26th code cell of the IPython notebook.  The `img_warp()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose to hardcode the source and destination points in the following manner:
 
 ```python
-src = np.array([[img.shape[1]/2.95, img.shape[0]/1.05],  
+src = np.array([[img.shape[1]/5.23, img.shape[0]/1.02],  
                 [img.shape[1]/2.17, img.shape[0]/1.58],
-                [img.shape[1]/1.85, img.shape[0]/1.58],
-                [img.shape[1]/1.23, img.shape[0]/1.05]],
-                dtype=np.float32)
-                
+                [img.shape[1]/1.86, img.shape[0]/1.58],
+                [img.shape[1]/1.23, img.shape[0]/1.02]],
+                dtype=np.float32)  
+
 dst = np.array([[img.shape[1]/4,img.shape[0]],
                 [img.shape[1]/4,0],
                 [img.shape[1]/1.33,0],
@@ -93,39 +94,39 @@ This resulted in the following source and destination points:
 
 | Source        | Destination   | 
 |:-------------:|:-------------:| 
-| 434, 653      | 320, 720      | 
+| 245, 706      | 320, 720      | 
 | 590, 456      | 320, 0        |
-| 692, 456      | 962, 0        |
-| 1041, 653     | 962, 720      |
+| 688, 456      | 962, 0        |
+| 1041, 706     | 962, 720      |
 
 
-![alt text][image8]
+![alt text][image9]
 
 #### 3. Identified lane-line pixels and fit their positions with a polynomial.
 
-In the 26th code cell of the IPython notebook I created a Histogram in order to find pixel value peaks on its left and right side.
+In the 30th code cell of the IPython notebook I created a Histogram in order to find pixel value peaks on its left and right side.
 These peaks are the starting points for the left and right lines. 
 
 As the next step, I created sliding windows in order to find lane-line pixels in the image. The first sliding windows are placed at the left and right starting points and the next windows will be on top of these. If a window find a minimum pixel values within its window (In my case this value is 50.) it re-centers itself, otherwise it gets the same X position as the last sliding window. 
 
 After this step I got the left and right line pixel positions and created a 2nd order polynomial kinda like this:
 
-![alt text][image9]
+![alt text][image10]
 
 
 #### 4. The radius of curvature of the lane and the position of the vehicle with respect to center.
 
 
-In the 30th code cell of the IPython notebook for the curve measurement I used the example code from Udacity's lessons.
+In the 32nd code cell of the IPython notebook for the curve measurement I used the example code from Udacity's lessons.
 For the distance between the Lane and the position of the vehicle, I calculated the center between the two fitted lane lines and measured the distance between this center and the vehicle position. 
 
 
 #### 5. Example image of of the result.
 
-I implemented this step in the 31st and 32nd code cells. First I used image distortion, then warped the image, detected the lane lines and fitted back the warped image. Here is an example of my result on a test image:
+I implemented this step in the 33rd and 34th code cells. First I used image distortion, then warped the image, detected the lane lines and fitted back the warped image. Here is an example of my result on a test image:
 
 
-![alt text][image10]
+![alt text][image11]
 
 
 ---

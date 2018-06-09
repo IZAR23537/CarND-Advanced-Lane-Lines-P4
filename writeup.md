@@ -74,7 +74,7 @@ For this image, I ended up using X oriented gradient, RGB, LAB and LUV colorspac
 
 #### 2. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
-The code for my perspective transform includes a function called `img_warp()`, which appears in the 26th code cell of the IPython notebook.  The `img_warp()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose to hardcode the source and destination points in the following manner:
+The code for my perspective transform includes a function called `img_warp()`, which appears in the 28th code cell of the IPython notebook.  The `img_warp()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose to hardcode the source and destination points in the following manner:
 
 ```python
 src = np.array([[img.shape[1]/5.23, img.shape[0]/1.02],  

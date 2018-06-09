@@ -136,7 +136,7 @@ I implemented this step in the 33rd and 34th code cells. First I used image dist
 
 Here's a [link to my video result](./project_video_processed.mp4)
 
-Also in YouTube: [Advanced Lane Finding Project](https://youtu.be/snypdT5v1ig)
+Also in YouTube: [Advanced Lane Finding Project](https://youtu.be/imCI3Cay1m4)
 
 ---
 
